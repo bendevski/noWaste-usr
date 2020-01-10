@@ -5,13 +5,11 @@ export default function (props){
 
     if (props.data.id){
         return(
-            <div>
-                <div className="Links">
+            <div className="navbar">
+                <div className="links">
                     <Link to='/'>Home</Link>
-                    <Link to='/cart'>Cart</Link>
                     <Link to='/menu'>Order</Link>
                     <Link to='/points'>Add points</Link>
-                    <Link to='/orders'>My orders</Link>
                     <Link to='/' onClick={props.log}>Log out</Link>
                 </div>
                 <div className="You">
@@ -25,8 +23,8 @@ export default function (props){
     ///uwu
     else{
         return(
-            <div>
-            <div>
+            <div className="navbar">
+            <div className="links">
                 <Link to='/'>Home</Link>
                 <Link to='/login'>Login</Link>
                 <Link to='/register'>Register</Link>

@@ -5,8 +5,70 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #be9fe1;
 }
 
+.order{
+  display: flex;
+  max-width: 600px;
+  justify-content: space-between;
+  flex: 1 100px;
+  align-items: flex-start;
+  background-color: #c9b6e4;
+  padding: 15px 10pxz;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  flex: 1 100px;
+  padding: 15px 10px;
+  background-color: #e1ccec;
+}
+.links{
+  display: flex;
+  flex-direction: row;
+  flex: 1 100px;
+  justify-content: space-evenly;
+}
+
+.You{
+  margin-left: auto;
+}
+
+.Item{
+  display: flex;
+  flex-direction: column;
+  flex: 1 100px;
+  align-items: center;
+}
+.addItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a{
+  background-color: #c9b6e4;
+  padding: 1px 1px;
+  border-radius: 5px;
+}
+img{
+  max-width: 100%;
+  height: 100vh;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qty{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+button {background-color: #e1ccec;}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

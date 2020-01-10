@@ -11,6 +11,7 @@ const INITIAL_CONTEXT = {
 export default function (props) {
     const { handleChange, details } = Form(INITIAL_CONTEXT);
     const [data, setData] = useState(null);
+    const [menu, setMeny] = useState(null);
     const [err, setErr] = useState(null);
 
     function login(e) {
@@ -28,6 +29,7 @@ export default function (props) {
         }
         fetchData()
 
+        
     }
 
     let show = ""

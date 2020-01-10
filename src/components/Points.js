@@ -28,7 +28,6 @@ export default function(props){
                 })
             }
             fetchData();
-            console.log(props.data.points);
         }
         else setShow("Please fill all fields");
     }

@@ -6,13 +6,11 @@ import Login from './components/Login';
 import Points from './components/Points';
 import Menu from './components/Menu';
 import axios from 'axios';
-import MyOrders from './components/MyOrders';
+
 
 export default function () {
     const [menu, setMenu] = useState(null);
     const [err, setErr] = useState(null);
-    const [ordersRaw, setOrdersRaw] = useState(null);
-    const [orders, setOrders] = useState(null);
     const [user, setUser] = useState({
         email: "Guest",
         points: 0,
@@ -48,32 +46,15 @@ export default function () {
       fetchData()
       
     };
-    function what2(){
-        async function fetchData() {
-        await axios({
-          method: 'get',
-          url: '/api/'+ user.id + '/orders',
-          headers: {"Authorization": "Bearer " + user.token}
-        }).then((result) => { setOrdersRaw(result.data); }).catch((error) => { setErr(error) });
-
-      }
-
-      fetchData()
-     
-    };
+    
     if (!menu && user.id){
         
         what();
-        what2();
-        
-        
-    }
-    if(ordersRaw && !orders)
-    {
-        console.log("men",menu,"ord", ordersRaw)
 
-        setOrders(ordersRaw.map((order)=> {return ({qty:order.qty, date:order.created_at, name:menu.filter((thing)=>thing.id==order.fooditem_id)[0].name})}, menu))
+        
+        
     }
+    
     return (
 
         <div>
@@ -94,9 +75,6 @@ export default function () {
                     <Menu data={user} menu={menu}/>
                 </Route>
 
-                <Route path="/orders">
-                    <MyOrders orders={orders}/>
-                </Route>
             </Router>
         </div>
     )
