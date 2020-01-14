@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Form from './simplifiers/Form';
 import axios from 'axios';
-
+import { Redirect } from 'react-router';
 const INITIAL_CONTEXT = {
   email: "",
   password: "",
@@ -39,6 +39,7 @@ export default function (props) {
        id: data.user.id,
       }
       )
+      return <Redirect to='/' />
   }
 
 
